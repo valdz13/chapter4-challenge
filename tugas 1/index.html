@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="p1" class="paragraf">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
+            ducimus amet nostrum molestias exercitationem? Vero quisquam non facere
+            minima, eveniet veritatis rerum molestiae. Quis ex doloremque eos eius
+            unde quod.
+        </div>
+    </div>
+
+    <button id="add" style="background-color: red;">Add Element</button>
+
+    <script>
+
+        const button = document.getElementById("add");
+        const paragraf1 = document.getElementById("p1");
+        let tambahId = 1;
+
+        button.onclick = function () {
+            
+            const parent = document.getElementById("wrapper");
+            let clonedElement = paragraf1.cloneNode(true);
+            
+            clonedElement.id = "p" + (tambahId + 1);
+            parent.append(clonedElement);
+            ++tambahId;
+            
+            parent.append(clonedElement);
+
+        };
+    </script>
+</body>
+
+</html>
