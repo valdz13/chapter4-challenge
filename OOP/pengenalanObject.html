@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengenalan Object</title>
+</head>
+<body>
+    <script>
+
+        //object literal
+        // const rudi = {
+        //     nama : 'rudi',
+        //     divisi: 'customer service',
+        //     sayHello: function(){
+        //         console.log('hello saya rudi')
+        //     }
+        // }
+
+        class PersegiPanjang {
+            constructor(panjang,lebar){
+                this.panjang = panjang;
+                this.lebar = lebar;
+            }
+            luas(){
+                 return this.panjang * this.lebar;  
+            }
+            keliling(){
+               return (this.panjang+this.lebar)*2;
+            };
+        }
+
+        const hitung = new PersegiPanjang(5,3);
+        console.log(hitung.panjang);
+        console.log(hitung.lebar);
+
+        console.log(hitung.luas());
+        console.log(hitung.keliling());
+
+
+
+    </script>
+    
+</body>
+</html>

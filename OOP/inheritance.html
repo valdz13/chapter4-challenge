@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    <script>
+        class Employee {
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+
+            sayHello(){
+                console.log(`Hi, saya adalah karyawan bernama ${this.name}`);
+            }
+        }
+
+        class Manager extends Employee{
+            constructor(name,age,hp){
+                super(name,age);
+                this.hp = hp;
+            }
+
+            sayHello(){
+                console.log(`Hi, saya adalah karyawan level manager bernama ${this.name}`)
+            }
+
+            sayJabatan(){
+                super.sayHello();
+                console.log(`Jabatan saya adalah manager dengan hp : ${this.hp}`);
+            }
+        }
+
+        //staff
+        const joko = new Employee('joko',25);
+        const susilo = new Employee('susilo',25);
+
+        //manager cs
+        const mega = new Manager('mega',25,'iphone 13');
+
+        // console.log(joko);
+        // console.log(susilo);
+        // console.log(mega);
+
+        //mega.sayHello();
+        mega.sayJabatan();
+
+    </script>
+</body>
+</html>
