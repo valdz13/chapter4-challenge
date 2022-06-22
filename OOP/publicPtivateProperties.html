@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Employee{
+
+            name;
+            age;
+            #salary;
+
+            constructor(name,age,salary){
+                this.name = name;
+                this.age = age;
+            }
+            get salary(){
+                return this.#salary;
+            }
+
+            set salary(gaji){
+                this.#salary = gaji;
+            }
+
+            #calculateSalary(){
+                return this.#salary * 25
+            }
+
+            sayHello(){
+                console.log(`my daily salary is ${this.#salary}, and my total salary this month is ${this.#calculateSalary()}`);
+            }
+        }
+
+        const hoho = new Employee('hoho',31,);
+
+        hoho.salary=1000000;
+        console.log(hoho.salary);
+        hoho.sayHello();
+
+        // console.log(hoho.name);
+        // console.log(hoho.age);
+        // console.log(hoho.salary);
+
+    </script>
+</body>
+</html>
